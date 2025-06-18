@@ -1,0 +1,141 @@
+/* Reset e base */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+/* Painel de polígonos */
+#info-panel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  max-width: 250px;
+}
+
+#polygon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#polygon-list li {
+  margin-bottom: 6px;
+  background: #f0f0f0;
+  padding: 6px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-small {
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.btn-small:hover {
+  background: #1e7e34;
+}
+
+/* Seletor de camadas base */
+#basemap-selector {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 1300;
+}
+
+.basemap-thumb {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+.basemap-thumb.selected {
+  border-color: #007bff;
+}
+
+/* Busca - posicionamento */
+.leaflet-control-geocoder {
+  position: absolute !important;
+  top: -42px !important;
+  left: 10px !important;
+  z-index: 1400 !important;
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 4px;
+  margin: 0 !important;
+  width: 90px !important;
+}
+
+/* Controles Leaflet (zoom, home, etc) */
+.leaflet-control-container .leaflet-top.leaflet-left {
+  top: 110px !important;
+  z-index: 1200;
+}
+
+/* Logos */
+#logo-link {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  z-index: 1300;
+}
+
+#logo {
+  height: 50px;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: auto;
+}
+
+#whatsapp-link {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1300;
+}
+
+#whatsapp-link img {
+  height: 90px;
+  width: auto;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Tutorial central inferior */
+#tutorial-link {
+  position: absolute;
+  bottom: 20px;
+  left: 51%;
+  transform: translateX(-50%);
+  z-index: 1300;
+}
+
+#tutorial-link img {
+  height: 65px;
+  cursor: pointer;
+  user-select: none;
+}

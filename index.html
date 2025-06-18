@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Criação KML - Engesat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/Treco - Engesat.png" />
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Leaflet.pm -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.pm/dist/leaflet.pm.css" />
+  <!-- Leaflet Control Geocoder CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Seletor de camadas base -->
+  <div id="basemap-selector">
+    <div
+      class="basemap-thumb selected"
+      data-map="satellite"
+      title="Satélite"
+      style="background-image: url('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/1/0/0');"
+    ></div>
+    <div
+      class="basemap-thumb"
+      data-map="streets"
+      title="Mapa"
+      style="background-image: url('https://a.tile.openstreetmap.org/1/0/0.png');"
+    ></div>
+  </div>
+
+  <!-- Painel de polígonos -->
+  <div id="info-panel">
+    <strong>Polígonos:</strong>
+    <ul id="polygon-list"></ul>
+  </div>
+
+  <!-- Logo Engesat -->
+  <a href="http://www.engesat.com.br/" target="_blank" id="logo-link">
+    <img src="img/Logo Engesat.png" alt="Logo Engesat" id="logo" />
+  </a>
+
+  <!-- Imagem central de tutorial -->
+  <a href="https://www.youtube.com/watch?v=wEDYJikLmqc" target="_blank" id="tutorial-link" title="Tutorial de Uso">
+    <img src="img/Tutorial-Uso.png" alt="Tutorial de Uso" />
+  </a>
+
+  <!-- Botão WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=554191340990" target="_blank" id="whatsapp-link" title="WhatsApp">
+    <img src="img/Whatsapp_logo.png" alt="WhatsApp" />
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.pm/dist/leaflet.pm.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+  <script src="https://unpkg.com/tokml@0.4.0/tokml.js"></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
