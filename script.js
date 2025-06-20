@@ -80,7 +80,7 @@ function exportSingleKML(layer) {
   });
 
   const name = feature.properties.name || "poligono";
-  const dataStr = "data:text/xml;charset=utf-8," + encodeURIComponent(kml);
+  const dataStr = "data:application/vnd.google-earth.kml+xml;charset=utf-8," + encodeURIComponent(kml);
   const dlAnchor = document.createElement("a");
   dlAnchor.setAttribute("href", dataStr);
   dlAnchor.setAttribute("download", `${name}.kml`);
@@ -182,8 +182,7 @@ document.querySelectorAll(".basemap-thumb").forEach((el) => {
 // Inicializa lista vazia
 updateList();
 
-// --- INTEGRAÇÃO DO WIDGET DE BUSCA ---
-
+// Integração do widget de busca
 const geocoder = L.Control.geocoder({
   defaultMarkGeocode: false,
   position: "topleft",
@@ -198,6 +197,9 @@ geocoder.on("markgeocode", function (e) {
     bbox.getNorthWest(),
     bbox.getSouthWest(),
   ]);
+  map.fitBounds(poly.getBounds());
+});
+
   map.fitBounds(poly.getBounds());
 });
 
